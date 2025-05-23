@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off Kulture - Categories</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #EED8D8; 
+        }
+
+        /* Header */
+        header {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        header p {
+            font-size: 0.9rem;
+            font-style: italic;
+            margin: 0.5rem 0;
+        }
+
+        header nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .category-grid button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .category-grid button:hover {
+            background-color: #555;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            background-color: #ddd;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.5rem;
+        }
+
+        .bottom-nav button {
+            background: none;
+            border: none;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+            font-family: 'Noto Color Emoji', 'Segoe UI Emoji', 'Apple Color Emoji', sans-serif;
+        }
+
+        .bottom-nav button:hover {
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #fff;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Off Kulture</h1>
+        <p>Stay loud. Stay you.</p>
+        <nav>
+            <a href="#" onclick="navigate('Home')">Home</a>
+            <a href="#" onclick="navigate('Cart')">Cart</a>
+            <a href="#" onclick="navigate('Logout')">Logout</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>Shop by Category</h2>
+        <div class="category-grid">
+            <button onclick="navigateCategory('Men', 'Men\'s Adventure Zone... Explore rugged jackets and bold tees in a virtual wilderness!')">Men</button>
+            <button onclick="navigateCategory('Women', 'Women\'s Fashion Runway... Discover elegant dresses and chic accessories in a glamorous setting!')">Women</button>
+            <button onclick="navigateCategory('Kids', 'Kids\' Playland... Fun colors and playful outfits await in a colorful playground!')">Kids</button>
+            <button onclick="navigateCategory('Sale', 'Sale Treasure Hunt... Snag discounted items in a thrilling discount dungeon!')">Sale</button>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button onclick="navigate('Home')">🏠</button>
+        <button onclick="navigate('Search')">🔍</button>
+        <button onclick="navigate('Cart')">🛒</button>
+        <button onclick="navigate('Profile')">👤</button>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Off Kulture</p>
+        <div>
+            <a href="#" onclick="navigate('About Us')">About Us</a>
+            <a href="#" onclick="navigate('Contact')">Contact</a>
+            <a href="#" onclick="navigate('FAQ')">FAQ</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Navigation -->
+    <script>
+        function navigate(destination) {
+            console.log(`Navigating to ${destination}...`);
+            alert(`Navigating to ${destination}...`);
+        }
+
+        function navigateCategory(category, message) {
+            console.log(`Navigating to ${category}: ${message}`);
+            alert(`Navigating to ${category}: ${message}`);
+        }
+    </script>
+</body>
+</html>
